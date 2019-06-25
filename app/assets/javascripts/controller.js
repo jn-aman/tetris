@@ -74,7 +74,7 @@
  })(jQuery);
 
   $("canvas").touchwipe({
-     wipeLeft: function() { keyPress( keys[ 37 ] );
+     wipeLeft: function() { keyPress( "left" );
         render(); },
      wipeRight: function() { alert("right"); },
      wipeUp: function() { alert("up"); },
