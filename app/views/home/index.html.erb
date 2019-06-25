@@ -7,11 +7,10 @@
 
 
 <script type="text/javascript">
-  $('html, body').css({
-    overflow: 'hidden',
-    height: '100%'
+$('html, body').on('touchstart touchmove', function(e){ 
+     //prevent native touch activity like scrolling
+     e.preventDefault(); 
 });
-
     document.addEventListener('touchmove',preventDefault, false);
 
 </script>
