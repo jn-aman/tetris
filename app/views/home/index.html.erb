@@ -11,9 +11,12 @@ html, body{
 
 
 <script type="text/javascript">
+var portrait = window.innerWidth < window.innerHeight;
+if(portrait)
+{
+  alert("Welcome to Tetris\n\n Instuctions:- \n SwipeLeft=>Left \n SwipeRight=>Right \n SwipeUp=>Rotate \nSwipeDown=>Rotate ");
 
-    document.addEventListener('touchmove',preventDefault, false);
-
+}
 </script>
     <head>
         <title>Tetris</title>
