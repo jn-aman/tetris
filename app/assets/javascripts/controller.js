@@ -82,8 +82,8 @@
         render(); },
      wipeDown: function() { keyPress( "rotate" );
         render(); },
-      min_move_x: 2,
-      min_move_y: 2,
+      min_move_x: 20,
+      min_move_y: 20,
      preventDefaultEvents: true
 });
 
