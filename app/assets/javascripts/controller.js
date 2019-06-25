@@ -73,8 +73,8 @@
  
  })(jQuery);
 
-
-$("canvas").touchwipe({
+function name(){
+  $("canvas").touchwipe({
      wipeLeft: function() { alert("left"); },
      wipeRight: function() { alert("right"); },
      wipeUp: function() { alert("up"); },
@@ -83,6 +83,9 @@ $("canvas").touchwipe({
      min_move_y: 20,
      preventDefaultEvents: true
 });
+
+}
+
 
 
 
@@ -97,7 +100,7 @@ document.body.onkeydown = function( e ) {
         32: 'drop'
     };
 
-
+name();
 
 
 
