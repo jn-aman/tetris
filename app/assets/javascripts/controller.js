@@ -85,16 +85,6 @@
 
 
 
-
-
-document.body.onkeydown = function( e ) {
-    var keys = {
-        37: 'left',
-        39: 'right',
-        40: 'rotate',
-        38: 'rotate',
-        32: 'drop'
-    };
 $("canvas").touchwipe({
      wipeLeft: function() { keyPress( keys[37] ); 
      render(); },
@@ -106,6 +96,17 @@ $("canvas").touchwipe({
      min_move_y: 20,
      preventDefaultEvents: true
 });
+
+
+document.body.onkeydown = function( e ) {
+    var keys = {
+        37: 'left',
+        39: 'right',
+        40: 'rotate',
+        38: 'rotate',
+        32: 'drop'
+    };
+    
 
 
 
