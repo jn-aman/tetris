@@ -74,15 +74,14 @@
  })(jQuery);
 
 
-$("canvas").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
-     min_move_x: 20,
-     min_move_y: 20,
-     preventDefaultEvents: true
-});
+// $("canvas").touchwipe({
+//      wipeLeft: function() {  },
+//      wipeRight: function() {  },
+//      wipeUp: function() { alert("up"); },
+//      min_move_x: 20,
+//      min_move_y: 20,
+//      preventDefaultEvents: true
+// });
 
 
 
@@ -97,10 +96,12 @@ document.body.onkeydown = function( e ) {
         32: 'drop'
     };
 $("canvas").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
+     wipeLeft: function() { keyPress( keys[37] ); 
+     render(); },
+     wipeRight: function() { keyPress( keys[39] ); 
+     render(); },
+     wipeUp: function() { keyPress( keys[40] ); 
+     render(); },
      min_move_x: 20,
      min_move_y: 20,
      preventDefaultEvents: true
@@ -109,9 +110,8 @@ $("canvas").touchwipe({
 
 
 
-
     if ( typeof keys[ e.keyCode ] != 'undefined' ) {
         keyPress( keys[ e.keyCode ] );
-        render();
+       
     }
 };
